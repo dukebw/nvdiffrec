@@ -1,0 +1,7 @@
+gdown
+glfw
+imageio
+ninja
+PyOpenGL
+xatlas
+git+https://github.com/NVlabs/nvdiffrast

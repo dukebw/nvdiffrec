@@ -1,0 +1,6 @@
+__pycache__/
+data/nerd/ethiopianHead_rescaled/
+data/nerd/moldGoldCape_rescaled/
+data/nerf_synthetic/
+env-nvdiffrec/
+out/
