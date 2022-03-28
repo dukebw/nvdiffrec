@@ -4,4 +4,5 @@ imageio
 ninja
 PyOpenGL
 xatlas
+git+https://github.com/facebookresearch/detectron2.git
 git+https://github.com/NVlabs/nvdiffrast
