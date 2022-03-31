@@ -78,11 +78,14 @@ def extract_masks(
         # Convert image from OpenCV BGR format to Matplotlib RGB format.
         image = image[:, :, ::-1]
         metadata = MetadataCatalog.get(
-            cfg.DATASETS.TEST[0] if len(cfg.DATASETS.TEST) else "__unused"
+            cfg.DATASETS.TEST[0] if (len(cfg.DATASETS.TEST) > 0) else "__unused"
         )
         visualizer = Visualizer(image, metadata, instance_mode=ColorMode.IMAGE)
         instances = predictions["instances"].to(torch.device("cpu"))
         vis_output = visualizer.draw_instance_predictions(predictions=instances)
+
+        out_img_path = os.path.join(output_dir, img_name)
+        vis_output.save(out_img_path)
 
 
 if __name__ == "__main__":
