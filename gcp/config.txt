@@ -1,0 +1,12 @@
+cloud = "gcp"
+debug = "True"
+duration = "14"
+guest_accelerator = [("nvidia-tesla-t4", "1")]
+image_id = "deeplearning-platform-release/common-cu113"
+instance_type = "n1-standard-16"
+metadata = [("install-nvidia-driver", "True")]
+network = "rnd-network"
+project = "modiface-rnd"
+repo_url = "git@bitbucket.org:modiface_inc/nvdiffrec.git"
+storage = "300"
+subnetwork = "main"
